@@ -27,7 +27,10 @@ export const UserButton = async () => {
     <DropdownMenu>
       <DropdownMenuTrigger className="flex justify-center items-center rounded-full aspect-square size-8 bg-orange-950 hover:bg-yellow-800 cursor-pointer">
         <span className="flex justify-center items-center rounded-full aspect-square size-7 bg-zinc-800">
-          <span className="font-bold text-xl text-zinc-300">K</span>
+          <span className="font-bold text-xl text-zinc-300">
+            {session.user.name?.charAt(0).toUpperCase() ||
+              session.user.username.charAt(0).toUpperCase()}
+          </span>
         </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
